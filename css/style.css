@@ -411,3 +411,89 @@ nav ul.mobile-hidden {
   }
 }
 
+/* ======================================= */
+/*           NAVIGAZIONE MOBILE            */
+/* ======================================= */
+
+@media (max-width: 768px) {
+
+  /* Mostra l’icona hamburger */
+  .mobile-menu-toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    user-select: none;
+  }
+
+  /* Nasconde il menu di default */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #1a1a1a;
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 999;
+    border-top: 1px solid #444;
+  }
+
+  /* Mostra il menu quando attivo */
+  nav ul.active {
+    display: flex;
+  }
+
+  /* Link del menu mobile */
+  nav ul li {
+    padding: 10px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  /* Sotto–menu mobile (Karate, Sci, ecc.) */
+  nav ul li ul {
+    position: static;
+    background: #222;
+    border-left: 3px solid #555;
+    padding: 5px 15px;
+    display: none;
+    margin-top: 5px;
+  }
+
+  nav ul li.open > ul {
+    display: block;
+  }
+
+  /* Social icons impilate */
+  .social-icons {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 20px;
+  }
+
+  .social-icons img {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Header non cambia */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Aggiustiamo spazio sotto l’header */
+  body {
+    padding-top: 120px;
+  }
+}
+
