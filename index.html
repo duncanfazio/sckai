@@ -1,1 +1,283 @@
-prova
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASD - Home</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Anton&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto Slab', serif;
+      background: #fff0f0;
+    }
+
+    /* ==========================
+       HEADER
+    ========================== */
+    header {
+      background: #b22234;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 52px;
+      font-family: 'Anton', sans-serif;
+      letter-spacing: 2px;
+    }
+
+    header p.catchphrase {
+      margin: 10px 0 15px 0;
+      font-size: 20px;
+      color: #ffffff;
+    }
+
+    header p.site {
+      margin: 10px 0 30px 0;
+      font-size: 24px;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* ==========================
+       NAVIGATION BAR
+    ========================== */
+    nav {
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      position: relative;
+      margin: 0 20px;
+    }
+
+    nav li a {
+      color: #0033a0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      font-family: 'Roboto Slab', serif;
+      position: relative;
+    }
+
+    nav li a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      background: #b22234;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+
+    nav li a:hover::after {
+      width: 100%;
+    }
+
+    nav li ul {
+      border-radius: 10px;
+      max-height: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background: #ffffff;
+      padding: 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      min-width: 180px;
+      z-index: 10;
+      transition: max-height 0.4s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav li ul li a {
+      padding: 12px 22px;
+      display: block;
+      font-size: 15px;
+      white-space: nowrap;
+      border-bottom: 1px solid #e0e0e0;
+      transition: background 0.25s ease;
+    }
+
+    nav li ul li a:hover {
+      border-radius: 8px;
+      background: #b22234;
+      color: #ffffff;
+    }
+
+    nav li:hover > ul {
+      max-height: 500px;
+      padding: 10px 0;
+    }
+
+    /* Social media icons */
+    .social-icons {
+      margin-left: 30px;
+      display: flex;
+    }
+
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+      margin-left: 5px;
+    }
+
+    /* ==========================
+       HERO SECTION
+    ========================== */
+    .hero-section {
+      width: 100%;
+      max-width: 1200px;
+      margin: 40px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .hero-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      text-shadow: 0 0 6px rgba(0,0,0,0.7);
+      padding: 20px;
+    }
+
+    .hero-text h2 {
+      font-family: 'Anton', sans-serif;
+      font-size: 42px;
+      margin: 0 0 15px 0;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    /* ==========================
+       FOOTER
+    ========================== */
+    footer {
+      background: #b22234;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h2 { font-size: 32px; }
+      .hero-text p { font-size: 16px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-text h2 { font-size: 24px; }
+      .hero-text p { font-size: 14px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>[NOME]</h1>
+    <p class="catchphrase">Il limite è il cielo</p>
+    <p class="site">ASD Official Site</p>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li>
+          <a href="#">Informazioni</a>
+          <ul>
+            <li><a href="#">Scopo dell'associazione</a></li>
+            <li><a href="#">Consiglio direttivo</a></li>
+            <li><a href="#">Informazioni di contatto</a></li>
+          </ul>
+        </li>
+
+        <li><a href="documentazione.html">Documentazione</a></li>
+
+        <!-- ✔ NUOVO MENU STAFF -->
+        <li><a href="staff.html">Staff</a></li>
+
+        <li>
+          <a href="#">Tesserati</a>
+          <ul>
+            <li><a href="karate.html">Karate</a></li>
+            <li><a href="sci.html">Sci</a></li>
+          </ul>
+        </li>
+
+        <li><a href="avvisi.html">Avvisi</a></li>
+        <li><a href="risultati.html">Risultati</a></li>
+
+        <!-- ✔ NUOVO MENU CONTATTI -->
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <div class="hero-section">
+    <img src="images/heroimage.jpg" alt="Hero Image">
+    <div class="hero-text">
+      <h2>Benvenuti nell'ASD [NOME]</h2>
+      <p>
+        Questo è il sito ufficiale della nostra Associazione Sportiva Dilettantistica.  
+        Qui troverai tutte le informazioni sulle attività, documenti ufficiali, avvisi,  
+        risultati sportivi e l’elenco completo dei nostri tesserati.
+      </p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 ASD [NOME] - Tutti i diritti riservati</p>
+  </footer>
+
+</body>
+</html>
+
