@@ -270,3 +270,144 @@ footer {
   margin-top: 40px;
 }
 
+/* =========================================================
+   A9 — RESPONSIVE VERSION FOR TABLET & MOBILE
+   ========================================================= */
+
+/* ------ MOBILE MENU SWITCH ------ */
+.mobile-menu-toggle {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #0033a0;
+  margin-left: 20px;
+}
+
+/* ------ BASE HIDE FOR MOBILE NAV ------ */
+nav ul.mobile-hidden {
+  display: none;
+}
+
+/* =========================================================
+   TABLET & MOBILE (max 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    padding: 25px 10px;
+  }
+
+  header h1 {
+    font-size: 34px;
+  }
+
+  header p.catchphrase {
+    font-size: 16px;
+  }
+
+  header p.site {
+    font-size: 18px;
+  }
+
+  /* NAVIGATION */
+  nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px 0;
+  }
+
+  nav li {
+    margin: 5px 0;
+  }
+
+  nav li ul {
+    position: static;
+    max-height: none;
+    box-shadow: none;
+    background: #fff;
+  }
+
+  nav li ul li a {
+    border-bottom: none;
+    padding: 10px 20px;
+  }
+
+  /* SHOW THE HAMBURGER BUTTON */
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  /* SOCIAL ICONS */
+  .social-icons {
+    margin-top: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* HERO SECTION */
+  .hero-section {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+  }
+
+  /* TABLES — MOBILE SCROLL ENABLED */
+  .table-container {
+    overflow-x: auto;
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  table {
+    font-size: 12px;
+    min-width: 700px; /* evita schiacciamento */
+  }
+
+  td img {
+    max-width: 55px;
+  }
+}
+
+/* =========================================================
+   SMALL SMARTPHONE (max 480px)
+   ========================================================= */
+@media (max-width: 480px) {
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  header p.site {
+    font-size: 16px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 13px;
+  }
+
+  table {
+    font-size: 11px;
+  }
+}
+
