@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tesserati Karate - ASD</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Anton&display=swap" rel="stylesheet">
+
+  <!-- CSS Esterno -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================
+       HEADER (identico alla index con Staff e Contatti)
+  ========================== -->
+  <header>
+    <h1>[NOME]</h1>
+    <p class="catchphrase">Il limite è il cielo</p>
+    <p class="site">ASD Official Site</p>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li>
+          <a href="#">Informazioni</a>
+          <ul>
+            <li><a href="#">Scopo dell'associazione</a></li>
+            <li><a href="#">Consiglio direttivo</a></li>
+            <li><a href="#">Informazioni di contatto</a></li>
+          </ul>
+        </li>
+
+        <li><a href="documentazione.html">Documentazione</a></li>
+
+        <li><a href="staff.html">Staff</a></li>
+
+        <li>
+          <a href="#">Tesserati</a>
+          <ul>
+            <li><a href="karate.html">Karate</a></li>
+            <li><a href="sci.html">Sci</a></li>
+          </ul>
+        </li>
+
+        <li><a href="avvisi.html">Avvisi</a></li>
+        <li><a href="risultati.html">Risultati</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================
+       MAIN CONTENT
+  ========================== -->
+  <main>
+    <h2>Tesserati Karate</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome e Cognome</th>
+            <th>Foto</th>
+            <th>Data di nascita</th>
+            <th>Grado</th>
+            <th>Risultati utili</th>
+            <th>Catchphrase</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ken Shiro</td>
+            <td><img src="images/kenshiro.jpg" alt="Foto Ken Shiro" onclick="openModal(this.src)"></td>
+            <td>13/09/1983</td>
+            <td>Maestro della Divina Scuola di Hokuto</td>
+            <td>Uccisore di Raol</td>
+            <td>"Tu sei già morto"</td>
+          </tr>
+          <tr>
+            <td>Juuza delle Nuvole</td>
+            <td><img src="images/juuza.jpg" alt="Foto Juuza delle Nuvole" onclick="openModal(this.src)"></td>
+            <td>01/10/1975</td>
+            <td>Stella del mutamento della Divina Scuola di Nanto</td>
+            <td>Cavalcatura di Re Nero</td>
+            <td>"Sono Juza delle nuvole. Sono un uomo libero. Libero come le nuvole del cielo sospinte lievemente dal vento"</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="imgModal" class="modal" onclick="closeModal(event)">
+    <img class="modal-content" id="modalImg">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+  </div>
+
+  <!-- ==========================
+       FOOTER
+  ========================== -->
+  <footer>
+    <p>© 2025 ASD [NOME] - Tutti i diritti riservati</p>
+  </footer>
+
+  <script>
+    function openModal(src) {
+      const modal = document.getElementById('imgModal');
+      const modalImg = document.getElementById('modalImg');
+      modal.style.display = 'flex';
+      modalImg.src = src;
+    }
+
+    function closeModal(e) {
+      if(e.target.id === 'imgModal' || e.target.className === 'close') {
+        document.getElementById('imgModal').style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>

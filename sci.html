@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tesserati Sci - ASD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    main {
+      padding: 60px 20px;
+      overflow-y: auto;
+      max-height: calc(100vh - 160px);
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Anton', sans-serif;
+      color: #b22234;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      max-width: 1200px;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 1px solid #e0e0e0;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background: #b22234;
+      color: #ffffff;
+    }
+
+    td img {
+      max-width: 70px;
+      height: auto;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      max-width: 600px;
+      max-height: 80%;
+      margin: auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .close {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      background: rgba(0,0,0,0.3);
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>[NOME]</h1>
+    <p class="catchphrase">Il limite è il cielo</p>
+    <p class="site">ASD Official Site</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li>
+          <a href="#">Informazioni</a>
+          <ul>
+            <li><a href="#">Scopo dell'associazione</a></li>
+            <li><a href="#">Consiglio direttivo</a></li>
+            <li><a href="#">Informazioni di contatto</a></li>
+          </ul>
+        </li>
+
+        <li><a href="documentazione.html">Documentazione</a></li>
+
+        <li><a href="staff.html">Staff</a></li>
+
+        <li>
+          <a href="#">Tesserati</a>
+          <ul>
+            <li><a href="karate.html">Karate</a></li>
+            <li><a href="sci.html">Sci</a></li>
+          </ul>
+        </li>
+
+        <li><a href="avvisi.html">Avvisi</a></li>
+        <li><a href="risultati.html">Risultati</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Tesserati Sci</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome e Cognome</th>
+          <th>Foto</th>
+          <th>Data di nascita</th>
+          <th>Specialità</th>
+          <th>Attrezzatura</th>
+          <th>Risultati</th>
+          <th>Catchphrase</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pietro Fazio</td>
+          <td><img src="images/scitessera01.jpg" alt="Foto Pietro Fazio" onclick="openModal(this.src)"></td>
+          <td>01/10/1975</td>
+          <td>Slalom gigante</td>
+          <td>Stockli Laser SX, Nordica Speedracer GW130</td>
+          <td></td>
+          <td>"BOMBARDINOOOOO!"</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <div id="imgModal" class="modal" onclick="closeModal(event)">
+    <img class="modal-content" id="modalImg">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+  </div>
+
+  <footer>
+    <p>© 2025 ASD [NOME] - Tutti i diritti riservati</p>
+  </footer>
+
+  <script>
+    function openModal(src) {
+      const modal = document.getElementById('imgModal');
+      const modalImg = document.getElementById('modalImg');
+      modal.style.display = 'flex';
+      modalImg.src = src;
+    }
+
+    function closeModal(e) {
+      if (e.target.id === 'imgModal' || e.target.className === 'close') {
+        document.getElementById('imgModal').style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
