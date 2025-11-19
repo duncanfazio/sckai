@@ -9,6 +9,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Anton&display=swap" rel="stylesheet">
 
   <style>
+  <script>
+  function toggleMobileMenu() {
+    const menu = document.querySelector("nav ul");
+    menu.classList.toggle("active");
+  }
+
+  // Apre / chiude i sottomenu nel mobile
+  document.querySelectorAll("nav ul > li > a").forEach(link => {
+    link.addEventListener("click", function (e) {
+      const parent = this.parentElement;
+
+      if (parent.querySelector("ul")) {
+        e.preventDefault();
+        parent.classList.toggle("open");
+      }
+    });
+  });
+</script>
+
     body {
       margin: 0;
       padding: 0;
